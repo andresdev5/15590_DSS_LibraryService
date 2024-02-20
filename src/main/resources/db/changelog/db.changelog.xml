@@ -80,6 +80,9 @@
             <column name="lastname" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
+            <column name="pseudonym" type="VARCHAR(75)">
+                <constraints nullable="true" unique="true"/>
+            </column>
             <column name="created_at" type="TIMESTAMP" defaultValue="NOW()">
                 <constraints nullable="false"/>
             </column>
@@ -96,13 +99,13 @@
             <column name="title" type="VARCHAR(100)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="isbn" type="VARCHAR(50)">
-                <constraints nullable="false" unique="true"/>
-            </column>
             <column name="synopsis" type="TEXT">
                 <constraints nullable="true"/>
             </column>
             <column name="publisher" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="isbn" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="year" type="INTEGER">

@@ -12,7 +12,7 @@ data class Role(
     val description: String,
 
     // permissions
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "role_permission",
         joinColumns = [JoinColumn(name = "role_id")],

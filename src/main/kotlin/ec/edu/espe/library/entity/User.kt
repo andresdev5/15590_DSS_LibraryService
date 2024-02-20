@@ -16,7 +16,7 @@ data class User(
     val email: String,
     val createdAt: LocalDateTime = LocalDateTime.now(),
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id")
     val role: Role,
 )

@@ -10,12 +10,15 @@ import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.server.ResponseStatusException
 import org.springframework.security.crypto.bcrypt.BCrypt
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
 @Service
 class AuthService(
     private val userService: UserService,
     private val tokenService: TokenService) {
+
+    @Transactional
     fun login(credentials: AuthCredentialsDto): AuthResponseDto {
         val user = userService.findByUsername(credentials.username)
 

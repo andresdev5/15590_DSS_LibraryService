@@ -5,11 +5,13 @@ import ec.edu.espe.library.entity.Author
 data class AuthorDto(
     val id: Long,
     val firstname: String,
-    val lastName: String,
+    val lastname: String,
+    val pseudonym: String? = null
 )
 
 fun AuthorDto.toEntity() = Author(
     id = id,
     firstname = firstname,
-    lastname = lastName
+    lastname = lastname,
+    pseudonym = pseudonym
 )

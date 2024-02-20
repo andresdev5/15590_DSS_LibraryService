@@ -12,6 +12,7 @@ data class Book(
     var title: String,
     var synopsis: String,
     var publisher: String,
+    var isbn: String,
     var year : Int,
     var createdAt: LocalDateTime = LocalDateTime.now(),
     var updatedAt: LocalDateTime = LocalDateTime.now(),
