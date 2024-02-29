@@ -1,0 +1,50 @@
+<div class="container mx-auto mt-10 px-5 py-5">
+
+    <h1 class="text-2xl mb-3 font-bold text-gray-800 dark:text-gray-100">Ultimos libros registrados</h1>
+
+    <div class="relative overflow-x-auto">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Nombre
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Sinopsis
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Editorial
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Año
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+                @for (book of books; track book.id) {
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{ book.title }}
+                        </th>
+                        <td class="px-6 py-4">
+                            {{ book.synopsis }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ book.publisher }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ book.year }}
+                        </td>
+                    </tr>
+                } @empty {
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <td class="px-6 py-4" colspan="4">
+                            No hay libros registrados
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
