@@ -25,8 +25,8 @@ INSERT INTO role_permission (role_id, permission_id) VALUES (1, 8) ON CONFLICT D
 INSERT INTO role_permission (role_id, permission_id) VALUES (2, 2) ON CONFLICT DO NOTHING;
 INSERT INTO role_permission (role_id, permission_id) VALUES (2, 6) ON CONFLICT DO NOTHING;
 
-INSERT INTO authors (id, firstname, lastname, pseudonym) VALUES (1, 'Joanne', 'Rowling', 'J. K. Rowling') ON CONFLICT DO NOTHING;
-INSERT INTO authors (id, firstname, lastname, pseudonym) VALUES (2, 'George', 'Orwell', null) ON CONFLICT DO NOTHING;
-INSERT INTO authors (id, firstname, lastname, pseudonym) VALUES (3, 'John Ronald.', 'Reuel Tolkien', 'J.R.R. Tolkien') ON CONFLICT DO NOTHING;
-INSERT INTO authors (id, firstname, lastname, pseudonym) VALUES (4, 'Stephen', 'King', null) ON CONFLICT DO NOTHING;
-INSERT INTO authors (id, firstname, lastname, pseudonym) VALUES (5, 'Agatha', 'Christie', null) ON CONFLICT DO NOTHING;
+--INSERT INTO authors (firstname, lastname, pseudonym) VALUES ('Joanne', 'Rowling', 'J. K. Rowling') ON CONFLICT DO NOTHING;
+--INSERT INTO authors (firstname, lastname, pseudonym) VALUES ('George', 'Orwell', null) ON CONFLICT DO NOTHING;
+--INSERT INTO authors (firstname, lastname, pseudonym) VALUES ('John Ronald.', 'Reuel Tolkien', 'J.R.R. Tolkien') ON CONFLICT DO NOTHING;
+--INSERT INTO authors (firstname, lastname, pseudonym) VALUES ('Stephen', 'King', null) ON CONFLICT DO NOTHING;
+--INSERT INTO authors (firstname, lastname, pseudonym) VALUES ('Agatha', 'Christie', null) ON CONFLICT DO NOTHING;

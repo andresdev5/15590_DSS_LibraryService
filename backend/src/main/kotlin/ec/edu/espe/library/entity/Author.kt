@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 data class Author(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
+    var id: Long? = null,
     var firstname: String = "",
     var lastname: String = "",
     var pseudonym: String? = null,
